@@ -1,0 +1,23 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block titulo %}  
+
+    <h1>Acá buscamos series de acuerdo al año:</h1>
+
+    <form action="/resultadosSerie/" method="GET">
+        Ingresa el año de la serie: <input type="number" name="año">
+        <input type="submit" value="Buscar">
+    </form>
+
+
+    {% if series %}
+
+    {% for x in series %}
+
+    <p>{{x.nombre}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+
+{% endblock %} 

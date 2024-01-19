@@ -1,0 +1,19 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block contenido1 %}
+
+<h1>Formulario para editar perfil: {{usuario}}</h1>
+
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{formu.as_table}}
+    </table>
+    
+    <input type="submit" value="Enviar">
+
+</form>
+
+
+
+
+{% endblock %}

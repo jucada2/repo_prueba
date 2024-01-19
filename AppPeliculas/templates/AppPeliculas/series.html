@@ -1,0 +1,34 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block stylesadd %}
+<style> 
+    header.masthead {
+      background-image: url("../static/AppPeliculas/assets/img/bg-showcase-1.jpg");
+    }
+</style>
+{% endblock %}
+
+{% block titulo %} 
+
+Acá puedes ver las series 
+{% endblock %} 
+
+{% block contenido1 %}
+
+<ol>
+
+{% for x in series %}
+
+<li>Nombre: {{x.nombre}} </li>
+
+  <a href="{% url 'Actualizar Serie' x.id %}">Actualizar</a> 
+  <a href="{% url 'Eliminar Serie' x.id %}">Borrar</a>
+
+{% endfor %}
+
+</ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Nueva Serie' %}">Agregar nueva serie</a>
+{% endblock %}

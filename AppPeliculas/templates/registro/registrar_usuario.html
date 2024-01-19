@@ -1,0 +1,19 @@
+{% extends "AppPeliculas/padre.html" %}
+
+
+{% block titulo %} 
+Acá vamos a crear un usuario
+{% endblock %} 
+
+{% block contenido1 %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formu}}
+
+    <input type="submit" value="Registrarse">
+</form>
+
+
+
+{% endblock %}

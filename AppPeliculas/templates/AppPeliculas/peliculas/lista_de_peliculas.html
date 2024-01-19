@@ -1,0 +1,26 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver las Peliculas 
+{% endblock %} 
+
+{% block contenido1 %}
+
+<ol>
+
+{% for x in object_list %}
+
+<li>Nombre: {{x.nombre}}  </li>
+    <a href="{% url 'Actualizar Pelicula' x.id %}">Actualizar</a> 
+    <a href="{% url 'Borrar Pelicula' x.id %}">Borrar</a>
+
+{% endfor %}
+
+</ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Crear Peliculas' %}">Agregar nueva película</a>
+
+
+{% endblock %}

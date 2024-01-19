@@ -1,0 +1,21 @@
+{% extends "AppPeliculas/padre.html" %}
+
+
+{% block titulo %} 
+Acá vamos a iniciar sesión
+{% endblock %} 
+
+{% block contenido1 %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formu}}
+
+    <input type="submit" value="Iniciar Sesión">
+</form>
+
+
+
+
+
+{% endblock %}

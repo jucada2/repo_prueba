@@ -1,0 +1,17 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver las series 
+{% endblock %} 
+
+{% block contenido1 %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    <p>¿Estás seguro de borrar la película: {{object}} </p>
+
+    <input type="submit" value="Borrar">
+
+</form>
+
+{% endblock %}

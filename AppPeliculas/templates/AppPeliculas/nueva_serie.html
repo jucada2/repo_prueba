@@ -1,0 +1,16 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block titulo %}  
+
+<h1>Acá creamos una serie nueva.</h1>
+
+    <form action="/nuevaSerie/" method="POST"> {% csrf_token %}
+
+        <p> Nombre: <input type="text" name="name"> </p>
+        <p> Año: <input type="number" name="year"> </p>
+        <p> Temporadas: <input type="number" name="seasons"> </p>
+
+        <input type="submit" value="Guardar">
+</form>
+
+{% endblock %} 

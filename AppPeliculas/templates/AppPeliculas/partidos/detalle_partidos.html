@@ -1,0 +1,27 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver el detalle de un Partido
+{% endblock %} 
+
+{% block contenido1 %}
+
+<ul>
+
+
+
+<li>    {{object.equipo_local}} vs {{object.equipo_visitante}}  </li>
+<li>    {{object.resultado}}  </li>
+<li>    {{object.fecha}}  </li>
+
+
+
+
+</ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Lista de Partidos' %}">Regresar</a>
+
+
+{% endblock %}

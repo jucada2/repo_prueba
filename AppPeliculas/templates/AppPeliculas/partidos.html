@@ -1,0 +1,31 @@
+{% extends "AppPeliculas/padre.html" %}
+
+{% block stylesadd %}
+<style> 
+    header.masthead {
+      background-image: url("../static/AppPeliculas/assets/img/bg-showcase-1.jpg");
+    }
+</style>
+{% endblock %}
+
+{% block titulo %} 
+
+Acá puedes ver las series 
+{% endblock %} 
+
+{% block contenido1 %}
+
+<ol>
+
+{% for x in partidos %}
+
+<li>Nombre: {{x.nombre}} </li>
+
+{% endfor %}
+
+</ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Nueva Serie' %}">Agregar nueva serie</a>
+{% endblock %}
